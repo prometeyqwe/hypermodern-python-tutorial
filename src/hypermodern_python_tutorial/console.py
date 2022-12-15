@@ -24,4 +24,3 @@ def main(language):
 
     click.secho(title, fg="yellow")
     click.echo(textwrap.fill(extract))
-
