@@ -44,9 +44,68 @@
 </nav>
 <section id="hyperiodern-python-tutorial-console">
 <h2>hyperiodern_python_tutorial.console<a class="headerlink" href="#hyperiodern-python-tutorial-console" title="Permalink to this heading">¶</a></h2>
+<span class="target" id="module-hypermodern_python_tutorial.console"></span><p>Command-line interface.</p>
 </section>
 <section id="hypermodern-python-tutorial-wikipedia">
 <h2>hypermodern_python_tutorial.wikipedia<a class="headerlink" href="#hypermodern-python-tutorial-wikipedia" title="Permalink to this heading">¶</a></h2>
+<span class="target" id="module-hypermodern_python_tutorial.wikipedia"></span><p>Client for the Wikipedia REST API, version 1.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="hypermodern_python_tutorial.wikipedia.Page">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hypermodern_python_tutorial.wikipedia.</span></span><span class="sig-name descname"><span class="pre">Page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extract</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hypermodern_python_tutorial.wikipedia.Page" title="Permalink to this definition">¶</a></dt>
+<dd><p>Page resource.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hypermodern_python_tutorial.wikipedia.Page.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#hypermodern_python_tutorial.wikipedia.Page.title" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type title of the Wikipedia page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hypermodern_python_tutorial.wikipedia.Page.extract">
+<span class="sig-name descname"><span class="pre">extract</span></span><a class="headerlink" href="#hypermodern_python_tutorial.wikipedia.Page.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>A plain text summary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hypermodern_python_tutorial.wikipedia.random_page">
+<span class="sig-prename descclassname"><span class="pre">hypermodern_python_tutorial.wikipedia.</span></span><span class="sig-name descname"><span class="pre">random_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'en'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hypermodern_python_tutorial.wikipedia.random_page" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a random page.</p>
+<p>Performs a GET request to the /page/random/summary endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>language</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – The Wikipedia language edition. By default, English is used (“en”).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#hypermodern_python_tutorial.wikipedia.Page" title="hypermodern_python_tutorial.wikipedia.Page"><code class="xref py py-class docutils literal notranslate"><span class="pre">Page</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A page resource.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ClickException</strong> – The HTTP request failed or the HTTP response
+    contained an invalid body.</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">hypermodern_python_tutorial</span> <span class="kn">import</span> <span class="n">wikipedia</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">page</span> <span class="o">=</span> <span class="n">wikipedia</span><span class="o">.</span><span class="n">random_page</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">bool</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </section>
 </section>
 
